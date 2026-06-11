@@ -36,7 +36,7 @@ export default function Chat() {
         setLoading(true);
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.BACKEND_URL ? '' : 'http://localhost:5000');
+            const apiUrl = import.meta.env.BACKEND_URL || 'https://ai-doctor-backend.vercel.app';
             const response = await fetch(`${apiUrl}/api/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
