@@ -36,7 +36,7 @@ export default function Chat() {
         setLoading(true);
 
         try {
-            const apiUrl = import.meta.env.BACKEND_URL || 'https://ai-doctor-backend.vercel.app';
+            const apiUrl = 'https://ai-doctor-backend.vercel.app';
             const response = await fetch(`${apiUrl}/api/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
